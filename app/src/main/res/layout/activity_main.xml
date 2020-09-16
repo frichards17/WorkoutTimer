@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="32dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="372dp"
+                android:layout_height="698dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/rest_minus2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ripple_effect"
+                app:layout_constraintEnd_toStartOf="@+id/sets_txt"
+                app:layout_constraintHorizontal_bias="0.595"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_sets"
+                app:srcCompat="@drawable/ic_left_chevron" />
+
+            <ImageButton
+                android:id="@+id/sets_add"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ripple_effect"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintHorizontal_bias="0.412"
+                app:layout_constraintStart_toEndOf="@+id/sets_txt"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_sets"
+                app:srcCompat="@drawable/ic_right_chevron" />
+
+            <EditText
+                android:id="@+id/sets_txt"
+                android:layout_width="57dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:ems="10"
+                android:fontFamily="@font/roboto_light"
+                android:hint="00"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_sets" />
+
+            <TextView
+                android:id="@+id/lbl_sets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="Sets"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_colon2" />
+
+            <EditText
+                android:id="@+id/rest_minutes"
+                android:layout_width="57dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:ems="10"
+                android:fontFamily="@font/roboto_light"
+                android:hint="00"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toStartOf="@+id/lbl_colon"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_rest" />
+
+            <ImageButton
+                android:id="@+id/rest_minus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ripple_effect"
+                app:layout_constraintEnd_toStartOf="@+id/work_minutes"
+                app:layout_constraintHorizontal_bias="0.79"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_rest"
+                app:srcCompat="@drawable/ic_left_chevron" />
+
+            <EditText
+                android:id="@+id/rest_seconds"
+                style="@android:style/Widget.AutoCompleteTextView"
+                android:layout_width="57dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:ems="10"
+                android:fontFamily="@font/roboto_light"
+                android:hint="00"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="42sp"
+                app:layout_constraintStart_toEndOf="@+id/lbl_colon"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_rest" />
+
+            <ImageButton
+                android:id="@+id/rest_add"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ripple_effect"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintHorizontal_bias="0.21"
+                app:layout_constraintStart_toEndOf="@+id/work_seconds"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_rest"
+                app:srcCompat="@drawable/ic_right_chevron" />
+
+            <TextView
+                android:id="@+id/lbl_colon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_light"
+                android:text=":"
+                android:textAlignment="center"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_rest" />
+
+            <Button
+                android:id="@+id/btn_start"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="122dp"
+                android:layout_height="53dp"
+                android:background="@drawable/ripple_effect"
+                android:fontFamily="@font/roboto_light"
+                android:text="Start"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/sets_txt"
+                app:layout_constraintVertical_bias="0.183" />
+
+            <EditText
+                android:id="@+id/work_seconds"
+                style="@android:style/Widget.AutoCompleteTextView"
+                android:layout_width="57dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:ems="10"
+                android:fontFamily="@font/roboto_light"
+                android:hint="00"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="42sp"
+                app:layout_constraintStart_toEndOf="@+id/lbl_colon"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_work" />
+
+            <TextView
+                android:id="@+id/lbl_colon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_light"
+                android:text=":"
+                android:textAlignment="center"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_work" />
+
+            <EditText
+                android:id="@+id/work_minutes"
+                android:layout_width="57dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:ems="10"
+                android:fontFamily="@font/roboto_light"
+                android:hint="00"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toStartOf="@+id/lbl_colon"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_work" />
+
+            <ImageButton
+                android:id="@+id/work_add"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ripple_effect"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintHorizontal_bias="0.214"
+                app:layout_constraintStart_toEndOf="@+id/work_seconds"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_work"
+                app:srcCompat="@drawable/ic_right_chevron" />
+
+            <ImageButton
+                android:id="@+id/work_minus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ripple_effect"
+                app:layout_constraintEnd_toStartOf="@+id/work_minutes"
+                app:layout_constraintHorizontal_bias="0.79"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_work"
+                app:srcCompat="@drawable/ic_left_chevron" />
+
+            <TextView
+                android:id="@+id/lbl_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="Work"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toTopOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/lbl_rest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="Rest"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_colon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
