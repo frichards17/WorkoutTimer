@@ -71,6 +71,24 @@ class MainActivity : AppCompatActivity() {
             rest_minutes.setText(restMins.toString().padStart(2,'0'))
             rest_seconds.setText(restSecs.toString().padStart(2,'0'))
         }
+
+        sets_minus.setOnClickListener {
+            updateSets()
+            when{
+                sets < 1 -> println("Sets is already 1")
+                else -> sets -= 1
+            }
+            sets_txt.setText(sets.toString().padStart(2, '0'))
+        }
+
+        sets_add.setOnClickListener {
+            updateSets()
+            when{
+                sets < 99 -> sets += 1
+                else -> sets = 99
+            }
+            sets_txt.setText(sets.toString().padStart(2, '0'))
+        }
     }
 
     private fun updateWork(): Unit{
@@ -92,6 +110,11 @@ class MainActivity : AppCompatActivity() {
         val minsInt = Integer.parseInt(mins)
         val secsInt = Integer.parseInt(secs)
         rest = (60 * minsInt) + secsInt
+    }
+
+    private fun updateSets(): Unit{
+        sets = if (sets_txt.text.isBlank()) 0
+        else Integer.parseInt(sets_txt.text.toString())
     }
 
 }
