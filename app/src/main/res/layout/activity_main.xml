@@ -182,6 +182,7 @@
                 android:layout_height="53dp"
                 android:background="@drawable/ripple_effect"
                 android:fontFamily="@font/roboto_light"
+                android:onClick="startTimer"
                 android:text="Start"
                 android:textColor="@color/design_default_color_background"
                 android:textSize="24sp"

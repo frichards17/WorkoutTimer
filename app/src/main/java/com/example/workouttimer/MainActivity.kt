@@ -1,5 +1,6 @@
 package com.example.workouttimer
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -7,9 +8,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    var work = 0
-    var rest = 0
-    var sets = 0
+    private var work = 0
+    private var rest = 0
+    private var sets = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -95,6 +96,16 @@ class MainActivity : AppCompatActivity() {
         rest_seconds.text = null
         sets_txt.text = null
 
+    }
+
+    fun startTimer(view: View){
+        val intent = Intent(this, TimerActivity::class.java)
+        var b = Bundle()
+        b.putInt("work", work)
+        b.putInt("rest", rest)
+        b.putInt("sets", sets)
+        intent.putExtras(b)
+        startActivity(intent)
     }
 
     private fun updateWork(): Unit{
